@@ -11,6 +11,12 @@ public class Money {
 
     @Override
     public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof Money)) {
+            return false;
+        }
         Money money = (Money) obj;
         return this.amount == money.amount
                 && this.currency.equals(money.currency);
@@ -35,5 +41,10 @@ public class Money {
     @Override
     public String toString() {
         return amount + " " + currency;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.amount;
     }
 }

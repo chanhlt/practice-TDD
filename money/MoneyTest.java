@@ -21,6 +21,21 @@ public class MoneyTest {
     }
 
     @Test
+    public void testEqualityWithNullObject() {
+        assertNotEquals(Money.dollar(5), null);
+    }
+
+    @Test
+    public void testEqualityWithOtherObjectType() {
+        assertNotEquals(Money.dollar(5), String.valueOf(5));
+    }
+
+    @Test
+    public void testHashCode() {
+        assertEquals(Money.dollar(5).hashCode(), 5);
+    }
+
+    @Test
     public void testFrancMultiplication() {
         Money five = Money.franc(5);
         assertEquals(Money.franc(10), five.times(2));
