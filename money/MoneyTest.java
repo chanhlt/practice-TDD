@@ -35,4 +35,9 @@ public class MoneyTest {
         assertEquals("CHF", Money.franc(1).currency());
     }
 
+    @Test
+    public void testDifferentClassEquality() {
+        assertEquals(new Money(5, "USD"), new Dollar(5, "USD"));
+    }
+
 }
