@@ -47,4 +47,8 @@ public class Money {
     public int hashCode() {
         return this.amount;
     }
+
+    public Money plus(Money added) {
+        return new Money(this.amount + added.amount, currency);
+    }
 }
