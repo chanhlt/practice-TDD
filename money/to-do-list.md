@@ -7,12 +7,12 @@
 5. Money rounding?
 6. equals()
 7. hashCode()
-8. equals(null)?
+8. equals(null)
 9. equals(other object)
 10. ~~5 CHF \* 2 = 10 CHF~~
-11. **Dollar/Franc duplication**
+11. ~~Dollar/Franc duplication~~
 12. ~~Common equals()~~
 13. Common times()
 14. ~~Compare Dollars with Francs~~
-15. Currency
-16.
+15. Currency?
+16. Delete testFrancMultiplication ?

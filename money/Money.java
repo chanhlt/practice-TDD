@@ -1,6 +1,6 @@
 package money;
 
-public class Money {
+public abstract class Money {
     protected int amount;
 
     @Override
@@ -8,5 +8,15 @@ public class Money {
         Money money = (Money) obj;
         return this.amount == money.amount
                 && this.getClass().equals(money.getClass());
+    }
+
+    abstract Money times(int multiplier);
+
+    public static Money dollar(int amount) {
+        return new Dollar(amount);
+    }
+
+    public static Money franc(int amount) {
+        return new Franc(amount);
     }
 }
